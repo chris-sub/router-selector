@@ -6,8 +6,8 @@
             <div class="summary">Showing {{filteredItems.length}} items</div>
           </div>
           <div class="input-field col s7 offset-s1">
+            <input v-model="search" @keyup.esc="search=''" type="text">
             <button class="suffix" @click="search=''"><img src='img/clear.png' alt="Reset Search" title="Reset" /></button>
-            <input v-model="search" type="text">
             <label>Search</label>
           </div>
         </div>
@@ -17,7 +17,7 @@
             <img src="img/forticlient.png" alt="" class="tile">
             <div>
               <div class="router-title">{{item.name}}</div>
-              <p class="location">{{item.location}}</p> 
+              <p class="location">{{item.location}}</p>
             </div>
             <div class="secondary-content green-text text-darken-2">
               {{item.ip}}
